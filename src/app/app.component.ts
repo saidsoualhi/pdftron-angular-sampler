@@ -33,8 +33,7 @@ export class AppComponent implements AfterViewInit {
         initialDoc: "../files/webviewer-demo-annotated.pdf",
         css: "/assets/pdftron.css",
         fullAPI: true,
-        licenseKey:
-          "BOBST Group SA(bobst.com/caen):OEM:BOBST Connect::B+:AMS(20220830):76B530730477780A7360B13AC9A2737860610F5EABB3ED55BD548E537A22B9C2E139B6F5C7",
+        licenseKey: ""
       },
       this.viewer.nativeElement
     ).then(async (instance) => {
@@ -42,8 +41,7 @@ export class AppComponent implements AfterViewInit {
       this.coreControlsEvent.emit(instance.UI.LayoutMode.Single);
       instance.UI.openElements(["notesPanel"]);
 
-      await PDFNet.initialize(
-        "BOBST Group SA(bobst.com/caen):OEM:BOBST Connect::B+:AMS(20220830):76B530730477780A7360B13AC9A2737860610F5EABB3ED55BD548E537A22B9C2E139B6F5C7"
+      await PDFNet.initialize(""
       );
 
       documentViewer.addEventListener("documentLoaded", async () => {
